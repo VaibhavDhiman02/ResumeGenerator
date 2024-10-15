@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Generator</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+
+    <p id="features">
+        New will be added in FUTURE versions.
+        <i class="fa-solid fa-xmark" id="features-close" onclick="featureClose()" style="color: #ffffff;"></i>
+    </p>
+
+    <h1 id="headings">Resume Generator</h1>
+    <h5 id="headings-2">GENERATE YOUR PROFESSIONAL RESUME WITH EASE</h5>
+
+            <form id="data-collection-form">
+
+                <div class="personal-info">
+
+                    <h2>Personal Information</h4>
+                        
+                    <div class="pi-name">
+                        <h4>Name</h4>
+                        <input id="first-name" type="text" required placeholder="Enter First Name"> &nbsp; &nbsp; &nbsp; &nbsp;
+                        <input id="second-name" type="text" placeholder="Enter Last Name">
+                    </div>
+
+                    <div class="phone-email">
+                        <h4>Phone & Email</h4>
+                        <label for="p-num"><i class="fa-solid fa-phone" style="color: #000000;"></i></label>
+                        &nbsp;
+                        <input id="p-num" type="number" required placeholder="Enter Phone Number">
+                        &nbsp; &nbsp; &nbsp; 
+                        <label for="em"><i class="fa-solid fa-envelope" style="color: #000000;"></i></label>
+                        &nbsp;
+                        <input id="em" type="text" required placeholder="Enter Email ID">
+                    </div>
+                    
+                    <div class="social-Links">
+                        <h4>Add Links</h4>
+                        <label for="linkedin"><i class="fa-brands fa-linkedin" style="color: #000000;"></i></label>&nbsp;
+                        <input id="linkedin" type="text" required placeholder="Linkedin">
+                        <br><br>
+                        <label for="github"><i class="fa-brands fa-github" style="color: #000000;"></i></label>&nbsp;
+                        <input id="github" type="text" required placeholder="Github">
+                        <br><br>
+                        <label for="portfolio"><i class="fa-solid fa-address-book" style="color: #000000;"></i></label>&nbsp;
+                        <input id="portfolio" type="text" placeholder="Portfolio">
+                    </div>
+
+                </div>
+
+                <div class="technical-info">
+
+                    <h2>Technical Information</h4>
+                    
+                    <div class="about-div">
+                        <h4>About</h4>
+                        <textarea id="about" placeholder="Enter Description about You"></textarea>
+                    </div>
+
+                    <div class="education-div">
+                        <h4>Education</h4>
+                        <span id="caution">
+                            Enter only 10, 10+2 & UG Scores.
+                        </span><br>
+                        <ul id="eduaction-list">
+                            <li id="edu1">
+                                <input id="name-10" type="text" required placeholder="Enter 10th School Name">
+                                &nbsp; &nbsp; &nbsp; &nbsp;
+                                <input id="marks-10" type="text" required placeholder="Enter 10th Marks & Year">
+                            </li>
+                            <br>
+                            <li id="edu2">
+                                <input id="name-12" type="text" required placeholder="Enter 12th School Name">
+                                &nbsp; &nbsp; &nbsp; &nbsp;
+                                <input id="marks-12" type="text" required placeholder="Enter 12th Marks & Year">
+                            </li>
+                            <br>
+                            <li id="edu3">
+                                <input id="name-U" type="text" required placeholder="Enter Uni/College Name">
+                                &nbsp; &nbsp; &nbsp; &nbsp;
+                                <input id="marks-U" type="text" required placeholder="Enter SGPA & Year">
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="skills-div">
+                        <h4>Skills</h4>
+                        <span id="caution">
+                            Enter only 10 Skills.
+                        </span>
+                        <ul id="skills-list">
+                            <li id="s1">
+                                <input id="skil-1" type="text" placeholder="Skill 1" required>
+                            </li>
+                            <li id="s2">
+                                <input id="skil-2" type="text" placeholder="Skill 2" required>
+                            </li>
+                            <li id="s3">
+                                <input id="skil-3" type="text" placeholder="Skill 3" required>
+                            </li>
+                            <li id="s4">
+                                <input id="skil-4" type="text" placeholder="Skill 4" required>
+                            </li>
+                            <li id="s5">
+                                <input id="skil-5" type="text" placeholder="Skill 5" >
+                            </li>
+                            <li id="s6">
+                                <input id="skil-6" type="text" placeholder="Skill 6" >
+                            </li>
+                            <li id="s7">
+                                <input id="skil-7" type="text" placeholder="Skill 7" >
+                            </li>
+                            <li id="s8">
+                                <input id="skil-8" type="text" placeholder="Skill 8" >
+                            </li>
+                            <li id="s9">
+                                <input id="skil-9" type="text" placeholder="Skill 9" >
+                            </li>
+                            <li id="s10">
+                                <input id="skil-10" type="text" placeholder="Skill 10">
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="projects-div">
+                        <h4>Projects</h4>
+                        <span id="caution">
+                            Enter only 3 Projects.
+                        </span>
+                        <ul id="projects-list">
+                            <li id="proj1">
+                                <p>Project 1</p>
+                                <input id="proj1-name" type="text" required placeholder="Enter Project Name">
+                                &nbsp; &nbsp; &nbsp;
+                                <input id="proj1-link" type="text" required placeholder="Enter Project Link">
+                                <br>
+                                <textarea id="proj1-desc" placeholder="Enter Project Description"></textarea>
+                            </li>
+                            <br><br>
+                            <li id="proj2">
+                                <p>Project 2</p>
+                                <input id="proj2-name" type="text" required placeholder="Enter Project Name">
+                                &nbsp; &nbsp; &nbsp;
+                                <input id="proj2-link" type="text" required placeholder="Enter Project Link">
+                                <br>
+                                <textarea id="proj2-desc" placeholder="Enter Project Description"></textarea>
+                            </li>
+                            <br><br>
+                            <li id="proj3">
+                                <p>Project 3</p>
+                                <input id="proj3-name" type="text" required placeholder="Enter Project Name">
+                                &nbsp; &nbsp; &nbsp;
+                                <input id="proj3-link" type="text" required placeholder="Enter Project Link">
+                                <br>
+                                <textarea id="proj3-desc" placeholder="Enter Project Description"></textarea>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+
+                <button onclick="generateCV()" id="gen-cv">GENERATE RESUME</button>
+
+            </form>
+            
+    <div class="template" id="temp">
+        <div class="cv-temp">
+            <div class="name-link-sec">
+                <h2 id="name">
+                    <span id="f-name">Vaibhav</span>
+                    <span id="l-name">Dhiman</span>
+                </h2>
+                <div class="links">
+                    <p >
+                        <i class="fa-solid fa-envelope" style="color: #000000;"></i>
+                        <span id="get-email">
+                            dhimanvaibhav839@gmail.com 
+                        </span> 
+                    </p>
+                    <span> | </span>
+                    <p >
+                        <i class="fa-solid fa-phone" style="color: #000000;"></i>
+                        <span id="get-phone">
+                            +91 73939-16131
+                        </span> 
+                    </p>
+                    <span> | </span>
+                    <p id="get-linkedin">
+                        <span>
+                            <i class="fa-brands fa-linkedin" style="color: #000000;"></i>
+                        </span>
+                        <a href="#" id="linked" target="_blank">
+                            LinkedIn
+                        </a>
+                    </p>
+                    <span> | </span>
+                    <p id="get-github">
+                        <span>
+                            <i class="fa-brands fa-github" style="color: #000000;"></i>
+                        </span> <a href="#" id="gitt" target="_blank">
+                            GitHub
+                        </a>
+                    </p>
+                    <span> | </span>
+                    <p id="get-port">
+                        <span>
+                            <i class="fa-solid fa-address-book" style="color: #000000;"></i>
+                        </span> <a href="#" id="folio" target="_blank">
+                            Portfolio
+                        </a>
+                    </p>
+                </div>
+            </div>
+            <hr>
+            <div class="about-sec">
+                <span class="head-span">
+                    <i class="fa-solid fa-angles-right" style="color: #000000;"></i>
+                    About
+                </span>
+                <p id="get-about">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati totam recusandae quas quidem eum vero laudantium amet aspernatur ullam inventore, harum autem pariatur beatae dolorem quisquam repudiandae alias perspiciatis ut modi! Dicta id laborum, mollitia dolores praesentium deleniti error asperiores.
+                </p>
+            </div>
+            <hr>
+            <div class="edu-sec">
+                <span class="head-span">
+                    <i class="fa-solid fa-angles-right" style="color: #000000;"></i>
+                    Education
+                </span>
+                <div class="edu-1-div">
+                    <h6 id="edu-10" class="edu-name">
+                        Ryan International Scool
+                    </h6>
+                    <p id="school-10">
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    </p>
+                </div>
+                <div class="edu-1-div">
+                    <h6 id="edu-12" class="edu-name">
+                        Ryan International Scool
+                    </h6>
+                    <p id="school-12">
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    </p>
+                </div>
+                <div class="edu-1-div">
+                    <h6 id="edu-uni" class="edu-name">
+                        Ryan International Scool
+                    </h6>
+                    <p id="school-uni">
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    </p>
+                </div>
+            </div>
+            <hr>
+            <div class="skills-sec">
+                <span class="head-span">
+                    <i class="fa-solid fa-angles-right" style="color: #000000;"></i>
+                    Skills
+                </span>
+                <ul>
+                    <li id="get-s1">Skill1</li>
+                    <li id="get-s2">Skill2</li>
+                    <li id="get-s3">Skill3</li>
+                    <li id="get-s4">Skill4</li>
+                    <li id="get-s5">Skill5</li>
+                    <li id="get-s6">Skill6</li>
+                    <li id="get-s7">Skill7</li>
+                    <li id="get-s8">Skill8</li>
+                    <li id="get-s9">Skill9</li>
+                    <li id="get-s10">Skill10</li>
+                </ul>
+            </div>
+            <hr>
+            <div class="proj-sec">
+                <span class="head-span">
+                    <i class="fa-solid fa-angles-right" style="color: #000000;"></i>
+                    Projects
+                </span>
+                <p id="proj1" class="pro">
+                    <span id="proj-1-name">
+                        Project1
+                    </span>
+                    <p id="proj-1-desc">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur nesciunt a aliquam officia praesentium expedita, vero debitis. Blanditiis harum maxime facere illo repellat eligendi aspernatur repudiandae, vitae error molestias molestiae, quod voluptatum ipsa officiis repellendus.
+                    </p>
+                </p>
+                <p id="proj2" class="pro">
+                    <span id="proj-2-name">
+                        Project2
+                    </span>
+                    <p id="proj-2-desc">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur nesciunt a aliquam officia praesentium expedita, vero debitis. Blanditiis harum maxime facere illo repellat eligendi aspernatur repudiandae, vitae error molestias molestiae, quod voluptatum ipsa officiis repellendus.
+                    </p>
+                </p>
+                <p id="proj3" class="pro">
+                    <span id="proj-3-name">
+                        Project3
+                    </span>
+                    <p id="proj-3-desc">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur nesciunt a aliquam officia praesentium expedita, vero debitis. Blanditiis harum maxime facere illo repellat eligendi aspernatur repudiandae, vitae error molestias molestiae, quod voluptatum ipsa officiis repellendus.
+                    </p>
+                </p>
+            </div>
+            <center>
+                <button onclick="downloadCV()" id="download-cv">DOWNLOAD RESUME</button>
+            </center>
+        </div>
+
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
